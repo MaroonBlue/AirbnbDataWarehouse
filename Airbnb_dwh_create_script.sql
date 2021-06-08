@@ -205,7 +205,8 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[ListingFact](
-	[ListingID] [int] NOT NULL,
+	[ListingID] [int] identity(1,1) NOT NULL,
+	[OriginalListingID] [int] NOT NULL,
 	[UpdateDateID] [int] NOT NULL,
 	[HostID] [int] NOT NULL,
 	[LocationID] [int] NOT NULL,
